@@ -1,0 +1,18 @@
+<div>
+  <div style="border: solid; text-align: center; width: 400px; margin:90px auto;">
+    <h1><strong>Alta Cliente</strong></h1>
+    <section style="display: flex;"><p>Nombre: </p><input type="text" [(ngModel)]="nameC"></section>
+    <section style="display: flex;"><p>CIF: </p><input type="text" [(ngModel)]="cifC" ></section>
+    <section style="display: flex;"><p>Dirección: </p><input type="text" [(ngModel)]="addressC"></section>
+    <section style="display: flex;"><p>Grupo </p>
+      <select name="grupo" [(ngModel)]="groupC">
+        <option value=0 >0</option>
+        <option value=1 >1</option>
+        <option value=2 >2</option>
+        </select>
+    </section>
+    <button (click)="addClient()">Guardar</button>
+  </div>
+</div>
+<app-list-client [listClients]="listClients"></app-list-client>
+<router-outlet></router-outlet>
